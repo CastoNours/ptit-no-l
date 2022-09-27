@@ -1,0 +1,115 @@
+/*                    ANIMATION                             */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: antiquewhite;
+}
+
+.snow_wrap {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#cc231e, #f5624d);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.snow,
+.snow:before,
+.snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image:
+    radial-gradient(4px 4px at 100px 50px, #fff 70%, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff 75%, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff 30%, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff 20%, transparent),
+    radial-gradient(6px 6px at 500px 100px, #fff 30%, transparent),
+    radial-gradient(3px 3px at 50px 200px, #fff 20%, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff 30%, transparent),
+    radial-gradient(6px 6px at 250px 400px, #fff 20%, transparent),
+    radial-gradient(3px 3px at 350px 500px, #fff 30%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(3px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(2px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(650px);
+  }
+}
+/*                                      FIN ANIMATION                                            */
+body {
+    background: linear-gradient(#cc231e, #f5624d);
+    color: antiquewhite;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 2.75vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0px;
+}
+.vbd{
+    flex-shrink: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.md{
+    margin: 6vh 2vw;
+}
+.bold{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+@media (max-width:600px){
+    body{
+        font-size: 1.6vh;
+    }
+    .B{
+        padding-top: 30px;
+    }   
+}
