@@ -117,4 +117,8 @@ body {
     .B{
         padding-top: 30px;
     }   
+    body, .dark{
+        background-color: #fff;
+        color: antiquewhite;
+    }
 }
